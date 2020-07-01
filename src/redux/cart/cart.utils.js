@@ -26,8 +26,8 @@ export const removeItemFromCart = (cartItems, cartItemToRemove) => {
    }
 
    return cartItems.map((cartItem) =>
-      cartItem.id === cartItemToRemove
-         ? { ...cartItem, quanitity: cartItem.quantity - 1 }
+      cartItem.id === cartItemToRemove.id
+         ? { ...cartItem, quantity: cartItem.quantity - 1 }
          : cartItem
    );
 };

@@ -11,7 +11,7 @@ import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import { selectCurrentUser } from './redux/user/user.selectors';
 import { createStructuredSelector } from 'reselect';
-// import SignIn from './components/sign-in/sign-in.component';
+// import CollectionPage from './pages/collection/collection.component';
 
 class App extends Component {
    unsubscribeFromAuth = null;
@@ -46,7 +46,7 @@ class App extends Component {
             <Header />
             <Switch>
                <Route exact path='/' component={Homepage} />
-               <Route exact path='/shop' component={shopPage} />
+               <Route path='/shop' component={shopPage} />
                <Route exact path='/checkout' component={checkoutPage} />
                <Route
                   exact
